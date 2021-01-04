@@ -22,6 +22,8 @@ The purpose of this project is to demonstrate your ability to collect, work with
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+## [`run_analysis.R` explained](code_book.md#Transformations)
+
 ## Dataset
 
 The data linked to the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone ([full data set description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), [download data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip))
