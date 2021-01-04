@@ -14,7 +14,7 @@ The purpose of this project is to demonstrate your ability to collect, work with
 4. The README that explains the analysis files is clear and understandable.
 5. The work submitted for this project is the work of the student who submitted it.
 
-## R Script 
+## R Script Requirements
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -24,4 +24,4 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 ## Dataset
 
-The data linked to the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone ([full dataset description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones))
+The data linked to the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone ([full data set description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), [download data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip))

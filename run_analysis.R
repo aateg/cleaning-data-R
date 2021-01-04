@@ -1,7 +1,8 @@
 # imports
 library(dplyr)
+library(data.table)
 
-# read dataset
+# read data set
 ## train
 train_path <- "./UCI HAR Dataset/train/"
 X_train <- read.table(paste(train_path, 'X_train.txt', sep = ""))
@@ -46,15 +47,23 @@ levels(aux_var) <- activity$label
 data$activity <- aux_var
 
 # 4. Appropriately labels the data set with descriptive variable names. 
+names(data) <- gsub("-", "", names(data)) 
+names(data) <- gsub("mean", "Mean", names(data)) 
+names(data) <- gsub("std", "Std", names(data))
 names(data) <- gsub("^t", "time", names(data))
 names(data) <- gsub("^f", "frequency", names(data))
 names(data) <- gsub("Acc", "Accelerometer", names(data))
 names(data) <- gsub("BodyBody", "Body", names(data))
 names(data) <- gsub("Gyro", "Gyroscope", names(data))
 names(data) <- gsub("Mag", "Magnitude", names(data))
+names(data) <- gsub("[()]", "", names(data))
 
 # 5. From the data set in step 4, creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
 tidy_data <- data %>%
     dplyr::group_by(subject, activity) %>%
     dplyr::summarise_all(mean)
+
+# Save data
+#write.table(names(data), "./variables_names.txt", row.names = FALSE, col.names = FALSE)
+write.table(tidy_data, "./tidydata.txt", row.names = FALSE)
